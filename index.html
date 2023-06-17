@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto px-2">
+        <form action="#">
+            <div class="header flex justify-between items-end my-2">
+                <div class="left-header">
+                    <img src="bpjs.svg" alt="">
+                </div>
+                <div class="right-header">
+                    Formulir Peser 1
+                </div>
+            </div>
+            <div id="title" class="p-3 font-bold text-center bg-gray-400">
+                FORMULIR PENDAFTARAN BADAN USAHA / BADAN HUKUM LAINNYA PEKERJA PENERIMA UPAH (PPU)
+            </div>
+            <div id="jenis_form" class="flex mx-2 mt-2">
+                <div class="flex items-center mr-4">
+                    <input id="registrasi" type="radio" value="Registrasi Baru" name="jenis-form" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                    <label for="registrasi" class="ml-2 text-3xl font-medium text-gray-900">Registrasi Baru</label>
+                </div>
+                <div class="flex items-center mr-4">
+                    <input id="perubahan" type="radio" value="Perubahan Data" name="jenis-form" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                    <label for="perubahan" class="ml-2 text-3xl font-medium text-gray-900">Perubahan Data</label>
+                </div>
+                <div class="flex grow">
+                    <div class="flex">
+                        <div class="flex flex-col gap-1 mr-1">
+                            <div class="group">
+                                <label for="verifikasi_oleh">Diverifikasi oleh:</label>
+                                <input type="text" name="verifikasi_oleh" class="border rounded border-slate-400 w-32" id="verifikasi_oleh">
+                            </div>
+                            <div class="group">
+                                <label for="tgl_verif">Tanggal:</label>
+                                <input type="date" name="tgl_verif" class="border rounded border-slate-400 w-2/3" id="tgl_verif">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1 mr-1">
+                            <div class="group">
+                                <label for="rekam_oleh">Direkam oleh:</label>
+                                <input type="text" name="rekam_oleh" class="border rounded border-slate-400 w-32" id="rekam_oleh">
+                            </div>
+                            <div class="group">
+                                <label for="tgl_rekam">Tanggal:</label>
+                                <input type="date" name="tgl_rekam" class="border rounded border-slate-400 w-2/3" id="tgl_rekam">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1 mr-1">
+                            <div class="group">
+                                <label for="setuju_kabid">Setuju Kabid PPK:</label>
+                                <input type="text" name="setuju_kabid" class="border rounded border-slate-400 w-32" id="setuju_kabid">
+                            </div>
+                            <div class="group">
+                                <label for="tgl_setuju">Tanggal:</label>
+                                <input type="date" name="tgl_setuju" class="border rounded border-slate-400 w-2/3" id="tgl_setuju">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border mt-2 border-black">
+            <hr class="border mt-0.5 border-black">
+            <div class="flex mt-2 flex-col">
+                <div class="flex gap-1">
+                    <div class="w-2/5">Kode Badan Usaha/Badan Hukum Lainnya</div>
+                    <div class="w-1/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1">
+                        </div>
+                    </div>
+                    <div class="w-1/5 text-right">No. Virtual Account</div>
+                    <div class="w-1/5 flex gap-1">
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="catatan text-xs">
+                (Diisi oleh petugas BPJS Kesehatan)
+            </div>
+            <hr class="border mt-2 border-black">
+            <hr class="border mt-0.5 border-black">
+            <div id="title" class="flex mt-2 p-1 font-bold bg-gray-400">
+                <div class="w-4/5">IDENTITAS BADAN USAHA / BADAN HUKUM LAINNYA</div>
+                <div class="w-1/5 text-right">Verifikasi</div>
+            </div>
+            <div class="flex mt-2 flex-col">
+                <div class="flex">
+                    <div class="w-2/5">Nama Badan Usaha/Badan Hukum Lainnya</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="nama" placeholder="DIISI NAMA BADAN USAHA/ BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_nama">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Alamat Badan Usaha/Badan Hukum Lainnya</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="alamat" placeholder="DIISI ALAMAT BADAN USAHA/ BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_alamat">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5"></div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex gap-1">
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-2/5">Kelurahan</div>
+                                <div class="w-3/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <input type="text" name="kelurahan" class="border rounded px-1" placeholder="DIISI NAMA KELURAHAN">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-2/5">Kecamatan</div>
+                                <div class="w-3/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <input type="text" name="kecamatan" class="border rounded px-1" placeholder="DIISI NAMA KECAMATAN">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5"></div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex gap-1">
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-2/5">Kab./Kota</div>
+                                <div class="w-3/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <input type="text" name="kota" class="border rounded px-1" placeholder="DIISI NAMA KAB/KOTA">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-2/5">Kode Pos</div>
+                                <div class="w-3/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <input type="number" name="kode_pos" class="border rounded px-1" placeholder="DIISI DENGAN NOMOR KODE POS">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Telepon</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex gap-1">
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-3/5 flex gap-1">
+                                    <div></div>
+                                    <div class="grow">
+                                        <!-- Menggunakan input text karena ada nomor telepon berawalan 0 -->
+                                        <input type="text" name="telepon" class="border rounded px-1" placeholder="NOMOR TELEPON">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-2/5">Faksimili</div>
+                                <div class="w-3/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <!-- Menggunakan input text karena ada nomor fax berawalan 0 -->
+                                        <input type="text" name="faksimili" class="border rounded px-1" placeholder="NOMOR FAKSIMILI">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">E-mail</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="email" class="border w-full rounded px-1" name="alamat" placeholder="ALAMAT EMAIL">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="invisible" name="verifikasi">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Status Badan Usaha/Badan Hukum Lainnya</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex">
+                            <div class="mr-1">
+                                <input type="radio" name="status_badan_usaha" value="pusat" id="pusat">
+                                <label for="pusat">Pusat</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_badan_usaha" value="cabang" id="cabang">
+                                <label for="cabang">Cabang</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_badan_usaha" value="anak perusahaan" id="anak_perusahan">
+                                <label for="anak_perusahan">Anak Perusahaan</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_badan_usaha" value="cabang anak perusahaan" id="cabang_anak_perusahaan">
+                                <label for="cabang_anak_perusahaan">Cabang Anak Perusahaan</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" name="status_badan_usaha" value="status_lainnya" id="status_lainnya">
+                                <label for="status_lainnya">Lainnya***&#41;</label>
+                                <input type="text" name="isi_status_lainnya" id="isi_status_lainnya" class="border rounded w-[8rem]">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_status_badan_usaha">
+                        </div>
+                    </div>
+                </div>
+                <div class="catatan text-xs">
+                    (Pilih salah satu)
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Bentuk Badan Hukum</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="bentuk_badan_hukum" placeholder="DIISI DENGAN BENTUK BADAN HUKUM DARI BADAN USAHA/BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_bentuk_badan_hukum">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Nomor Induk Usaha (NIB)</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="nomor_induk_usaha" placeholder="DIISI DENGAN NOMOR BADAN HUKUM DARI BADAN USAHA/BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_nomor_induk_usaha">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Nomor Izin Usaha/ Izin Lainnya (Akta,MOU, dll)</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="nomor_izin_usaha" placeholder="DIISI DENGAN NOMOR IJIN BADAN USAHA /BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_nomor_izin_usaha">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Jenis Usaha Utama</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="jenis_usaha_utama" placeholder="JIKA TIDAK MENGETAHUI DAPAT DITANYA KEPADA PETUGAS BPJS KESEHATAN">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="invisible" name="verifikasi_jenis_usaha_utama">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">NPWP Badan/Perorangan</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="npwp" placeholder="DIISI DENGAN NO NPWP BADAN USAHA / BADAN HUKUM LAINNYA/ PERORANGAN YANG BERSANGKUTAN">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="" name="verifikasi_npwp">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Nama Pimpinan Badan Usaha/Badan Hukum Lainnya</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="nama_pimpinan_badan" placeholder="DIISI NAMA PIMPINAN BADAN USAHA/ BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="" name="verifikasi_nama_pimpinan_badan">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Status Kepemilikan Badan Usaha/Badan Hukum Lainnya</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex">
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="Swasta Nasional" id="swasta_nasional">
+                                <label for="swasta_nasional">Swasta Nasional</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="BUMN" id="bumn">
+                                <label for="bumn">BUMN</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="Koperasi" id="koperasi">
+                                <label for="koperasi">Koperasi</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="Joint Venture" id="joint_venture">
+                                <label for="joint_venture">Joint Venture</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" name="status_kepemilikan" value="status_kepemilikan_lainnya" id="status_kepemilikan_lainnya">
+                                <label for="status_kepemilikan_lainnya">Lainnya***&#41;</label>
+                                <input type="text" name="isi_status_kepemilikan_lainnya" id="isi_status_kepemilikan_lainnya" class="border rounded w-[8rem]">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_status_kepemilikan">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5"></div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex">
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="Swasta Asing" id="swasta_asing">
+                                <label for="swasta_asing">Swasta Asing</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="BUMD" id="BUMD">
+                                <label for="BUMD">BUMD</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="Yayasan" id="yayasan">
+                                <label for="yayasan">Yayasan</label>
+                            </div>
+                            <div class="mr-1">
+                                <input type="radio" name="status_kepemilikan" value="YKK" id="ykk">
+                                <label for="ykk">YKK**&#41;</label>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="invisible" name="verifikasi_status_kepemilikan">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Jenis Usaha</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="jenis_usaha" placeholder="JIKA TIDAK MENGETAHUI DAPAT DITANYA KEPADA PETUGAS BPJS KESEHATAN">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="" name="verifikasi_jenis_usaha">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Kode Klasifikasi Baku Lapangan Usaha Indonesia</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="kode_klasifikasi" placeholder="DIISI NOMOR KLASIFIKASI BAKU LAPANGAN USAHA INDONESIA">
+                        </div>
+                        <div>
+                            <input type="checkbox" class="" name="verifikasi_kode_klasifikasi">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Nama Bank</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex">
+                            <div class="mr-2">
+                                <input type="radio" name="nama_bank" value="Bank Mandiri" id="bank_mandiri">
+                                <label for="bank_mandiri">Bank Mandiri</label>
+                            </div>
+                            <div class="mr-2">
+                                <input type="radio" name="nama_bank" value="BRI" id="bri">
+                                <label for="bri">BRI</label>
+                            </div>
+                            <div class="mr-2">
+                                <input type="radio" name="nama_bank" value="BNI" id="bni">
+                                <label for="bni">BNI</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" name="nama_bank" value="nama_bank_lainnya" id="nama_bank_lainnya">
+                                <label for="nama_bank_lainnya">Lainnya***&#41;</label>
+                                <input type="text" name="isi_nama_bank_lainnya" id="isi_nama_bank_lainnya" class="border rounded w-[8rem]">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_nama_bank">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="title" class="flex mt-2 p-1 font-bold bg-gray-400">
+                <div class="w-full">IDENTITAS <span class="italic">CONTACT PERSON</span> BADAN USAHA / BADAN HUKUM LAINNYA</div>
+            </div>
+            <div class="flex flex-col">
+                <div class="flex mt-2">
+                    <div class="w-2/5">Nama Lengkap</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="nama_lengkap" placeholder="DIISI DENGAN NAMA LENGKAP KONTAK PERSON DARI BADAN USAHA / BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_nama_lengkap">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Jabatan</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="jabatan" placeholder="DIISI DENGAN JABATAN KONTAK PERSON DARI BADAN USAHA / BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_jabatan">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Jabatan</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="text" class="border w-full rounded px-1" name="jabatan" placeholder="DIISI DENGAN JABATAN KONTAK PERSON DARI BADAN USAHA / BADAN HUKUM LAINNYA">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_jabatan">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Telepon dan <span class="italic">Extention</span></div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex gap-1">
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-3/5 flex gap-1">
+                                    <div></div>
+                                    <div class="grow">
+                                        <!-- Menggunakan input text karena ada nomor telepon berawalan 0 -->
+                                        <input type="text" name="telepon_kontak" class="border rounded px-1" placeholder="NOMOR TELEPON KONTAK PERSON">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-1/5">Ext</div>
+                                <div class="w-4/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <input type="text" name="extention" class="border rounded px-1" placeholder="NOMOR EXTENTION KONTAK PERSON">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="verifikasi_telepon_kontak">
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Faksimili</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+
+                                        <!-- Menggunakan input text karena ada nomor fax berawalan 0 -->
+                            <input type="text" class="border w-full rounded px-1" name="faksimili_kontak" placeholder="KODE AREA - NOMOR FAX">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_faksimili_kontak">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5"><span class="italic">Handphone</span></div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex gap-1">
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-3/5 flex gap-1">
+                                    <div></div>
+                                    <div class="grow">
+
+                                        <!-- Menggunakan input text karena ada nomor handphone berawalan 0 -->
+                                        <input type="text" name="handphone_kontak" class="border rounded px-1" placeholder="NOMOR HANDPHONE KONTAK PERSON">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-1/5"><span class="italic">E-mail</span></div>
+                                <div class="w-4/5 flex gap-1">
+                                    <div>:</div>
+                                    <div class="grow">
+                                        <input type="email" name="email_kontak" class="border rounded px-1" placeholder="ALAMAT EMAIL KONTAK PERSON">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="verifikasi_handphone_kontak">
+                    </div>
+                </div>
+            </div>
+            <div id="title" class="flex mt-2 p-1 font-bold bg-gray-400">
+                <div class="w-full">KEIKUTSERTAAN PROGRAM JAMINAN KESEHATAN NASIONAL (JKN)</div>
+            </div>
+            <div class="flex flex-col">
+                <div class="flex mt-2">
+                    <div class="w-2/5">Menjadi Peserta Terhitung Mulai Tanggal</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow flex gap-1">
+                            <div class="w-1/2 flex gap-1">
+                                <div class="w-3/5 flex gap-1">
+                                    <div></div>
+                                    <div class="grow">
+                                        <input type="date" name="tgl_mulai_peserta_jkn" class="border rounded px-1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex gap-1">
+                                *Diisi Oleh Petugas BPJS Kesehatan
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="verifikasi_tgl_mulai_peserta_jkn">
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Jumlah Tenaga Kerja</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="number" class="border w-50 rounded px-1" name="jumlah_tenaga_kerja" placeholder="JUMLAH ORANG">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_jumlah_tenaga_kerja">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Jumlah Keluarga</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="number" class="border w-50 rounded px-1" name="jumlah_keluarga" placeholder="JUMLAH ORANG">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_jumlah_keluarga">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-2">
+                    <div class="w-2/5">Total Tenaga Kerja dan Keluarga</div>
+                    <div class="w-3/5 flex gap-1">
+                        <div>:</div>
+                        <div class="grow">
+                            <input type="number" class="border w-50 rounded px-1" name="total_tenaga_kerja_dan_keluarga" placeholder="JUMLAH ORANG">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="verifikasi_total_tenaga_kerja_dan_keluarga">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border border-1 mt-2 border-black">
+            <div>
+                <div class="text-center text-2xl font-bold">SURAT PERNYATAAN</div>
+                <p>
+                    <span class="font-bold">Saya menyatakan bahwa :</span>
+                    <ol class="list-decimal list-inside">
+                        <li>Informasi ini dibuat dengan sebenarnya, apabila informasi ini tidak benar maka saya bersedia dikenakan sanksi sesuai dengan peraturan perundang-undangan yang berlaku.</li>
+                        <li>Bahwa informasi terkati data pegawai dan anggota keluarga dan jumlah gaji yang disampaikan adalah sesuai dengan kondisi sebenarnya sesuai dengan peraturan perundang-undangan yang berlaku.</li>
+                        <li>Menerima amanah dari Pekerja untuk memotong, memungut, dan menyetorkan iuran dari besaran upah/gaji dan tunjangan tetap Pekerja setiap bulan sesuai Undang-Undang No 40 Tahun 2004 Pasal 17 Ayat 1 & 2.</li>
+                        <li>Menyetujui bahwa iuran yang dibayarkan sebagai hibah dan tidak dikembalikan sekalipun belum mendapatkan manfaat pelayanan kesehatan dan iuran tersebut sudah diikhlaskan untuk menolong peserta lain yang membutuhkan sebagai bentuk gotong royong.</li>
+                        <li>Memberikan kuasa kepada BPJS Kesehatan untuk mengelola dana amanat beserta hasil pengembangannya agar digunakan sebesar-besarnya untuk pembayaran manfaat kepada Peserta sesuai Peraturan Perundang-Undangan.</li>
+                        <li>Memberikan kuasa kepada BPJS Kesehatan untuk menggunakan informasi medis peserta baik dari rekam medis maupuan dokumen pendukung lainnya jika diperlukan.</li>
+                        <li>Atas kuasa pengelolaan dana amat sebagaimana tercantum pada angka 4, BPJS Kesehatan berhak untuk mendapatkan dana operasional penyelenggaraan program Jaminan Kesehatan Nasional dari sebagian iuran peserta yang besarnya sesuai dengan Peraturan Perundang-Undangan.</li>
+                    </ol>
+                </p>
+                <div class="flex mt-7">
+                    <div class="flex-1">
+                        <p>BPJS Kesehatan menerima kuasa pengelolaan jaminan kesehatan peserta <br> BPJS Kesehatan,</p>
+                        <div class="mt-52 w-80">
+                            <hr class="border-1 border-gray-500">
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-row-reverse">
+                        <div>
+                            <input type="text" name="kota_domisili_ttd" class="border border-t-0 border-x-0 w-1/5" placeholder="">, <input type="date" name="tgl_ttd" class="border border-t-0 border-x-0 w-3/5">
+                            <p>
+                                Pimpinan/HRD/Pihak yang diberi kuasa
+                            </p>
+                            <div class="border w-[8rem] h-[10rem] text-center -ml-10 mt-3">
+                                materai Rp.6000,-
+                            </div>
+                            <div class="mt-5 mr-5 w-80 text-right">
+                                *&#41; <br>
+                                <hr class="border-1 border-gray-500 w-80">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-left mt-5 text-sm">
+                    <span>
+                        <span class="underline">Catatan</span><span> :</span><br>
+                        <span>*Diisi nama lengkap, tanda tangan dan stempel Perusahaan</span><br>
+                        <span>** Yayasan Kesejahteraan Karyawan</span><br>
+                        <span>*** Sebutkan</span><br>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
